@@ -36,7 +36,14 @@ async def mock_voice(
 
     if obj == "Opportunity":
         parsed_fields["Description__c"] = "Salesforce"
+        parsed_fields["NextStep"] = "Working on SOWs signing"
+        parsed_fields["SharePointLink__c"] = "Public"
+        parsed_fields["LinkToProposal__c"] = "http://www.google.com"
+        parsed_fields["Competitive_Status__c"] = "Open and Competitive"
+        parsed_fields["Red_Flags__c"] = "Client budget approval still pending from HQ."
     elif obj in {"Project__c", "Project"}:
+        parsed_fields["Customer_description__c"] = "Global healthcare company with a central purpose to help people live their healthiest possible lives."
+        parsed_fields["JiraProjectKey__c"] = "SFDX"
         parsed_fields["Project_description__c"] = "Salesforce"
     else:
         parsed_fields["Description__c"] = "Salesforce"
